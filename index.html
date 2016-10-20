@@ -1,0 +1,404 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A simple, customizable bot for discord.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Tny Bot</title>
+
+    <!-- Page styles -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.blue-indigo.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+    <header class="tny-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="tny-title mdl-layout-title">
+                <span class="center-vert">Tny Bot</span>
+            </span>
+
+            <!-- Mobile Title -->
+            <span class="tny-mobile-title mdl-layout-title">
+                <span class="center-vert">Tny Bot</span>
+            </span>
+
+            <!-- Navigation -->
+            <div class="tny-navigation-container">
+                <nav class="tny-navigation mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase"
+                       href="">Features</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase"
+                       href="">About</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase"
+                       href="">Docs</a>
+                </nav>
+            </div>
+
+            <!-- Spacer -->
+            <div class="mdl-layout-spacer"></div>
+
+            <!-- Accent-colored raised button with ripple -->
+            <a href="https://tny.click/invite" target="_blank">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                    <img src="images/discord-light.svg">
+                    <span>Add to Discord</span>
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <div class="tny-drawer mdl-layout__drawer">
+        <!-- Title -->
+        <span class="mdl-layout-title">
+            <img class="logo-image" src="images/tnybot_small.png">
+            <span>Tny Bot</span>
+        </span>
+
+        <!-- Navigation -->
+        <nav class="mdl-navigation mdl-js-ripple-effect">
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="https://tny.click/invite" target="_blank">
+                <img src="images/discord.svg">
+                Add To Discord
+            </a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="https://github.com/00firestar00/TnyBot-Discord" target="_blank">
+                <img src="images/github-circle.svg">
+                View on GitHub
+            </a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="https://discord.gg/fqmCJJQ" target="_blank">
+                <img src="images/comment-question-outline.svg">
+                Join Support Server
+            </a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="">
+                Features
+            </a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="">
+                About
+            </a>
+            <a class="mdl-navigation__link mdl-typography--text-uppercase"
+               href="">
+                Docs
+            </a>
+        </nav>
+    </div>
+
+    <main class="mdl-layout__content mdl-color--grey-100">
+        <section id="top" class="section--center mdl-grid mdl-typography--text-center">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <img class="hero-image" src="images/tnybot.png"></div>
+            <div class="mdl-cell mdl-cell--4-col">
+                <h1 class="logo-font tny-slogan center-vert">Tny Bot</h1>
+                <h4 class="logo-font tny-sub-slogan center-vert">A simple, customizable bot for discord.</h4>
+            </div>
+        </section>
+        <section class="section--center mdl-grid">
+            <div class="mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            <div class="mdl-cell mdl-cell--10-col">
+                <div class="mdl-card mdl-grid--no-spacing mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+                    <div class="tny-card mdl-card__supporting-text">
+                        <h2>Commands</h2>
+                        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                            <div class="mdl-tabs__tab-bar">
+                                <a href="#utility-panel" class="mdl-tabs__tab is-active">Utility</a>
+                                <a href="#roles-panel" class="mdl-tabs__tab">Roles</a>
+                                <a href="#notifications-panel" class="mdl-tabs__tab">Notifications</a>
+                            </div>
+
+                            <div class="mdl-tabs__panel is-active" id="utility-panel">
+                                <table class="tny-table mld-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">Command</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Description</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Examples / Aliases</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Permissions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!help</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Shows the help menu</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!help, !help Roles</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!invite</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Gets the invite link for Tny</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!invite</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!hello</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say hello (random phrase)</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!hello</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!joined</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Prints when a user joined the server</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!joined @tnybot</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!clear</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Clears chat messages</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!clear, !clear 100</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Messages</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!say</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say something</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!say I'm the best bot ever!</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!addemoji</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Add an emoji to the server using a url</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!addemoji http://tny.site/images/tnybot.png</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Emojis</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!emoji</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Lists the custom emojis on this server</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!emoji, !emojis</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!listserveroles</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Lists the roles on the server.</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mdl-tabs__panel" id="roles-panel">
+                                <table class="tny-table mld-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">Command</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Description</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Examples / Aliases</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Permissions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!roleshelp</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Prints the help for these commands</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!roleshelp, !biashelp</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!setmainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            Sets a main role, or list of main roles.<br>Only one of these can be used by a member at a time.
+                                        </td>
+                                        <td class="mdl-data-table__cell--non-numeric">!setmainrole Robot, Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!setrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            Sets a role, or list of roles.<br>Unlike main roles, members can have multiple of them
+                                        </td>
+                                        <td class="mdl-data-table__cell--non-numeric">!setrole Robot, Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!delrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Deletes a self assign role</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!delrole Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!listmainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Lists the roles on the server.</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!listrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say something</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!say I'm the best bot ever!</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!mainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say something</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!say I'm the best bot ever!</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!role</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Prints when a user joined the server</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!joined @tnybot</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!clearrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Clears chat messages</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!clear, !clear 100</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Messages</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="mdl-tabs__panel" id="notifications-panel">
+                                <table class="tny-table mld-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table">
+                                    <thead>
+                                    <tr>
+                                        <th class="mdl-data-table__cell--non-numeric">Command</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Description</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Examples / Aliases</th>
+                                        <th class="mdl-data-table__cell--non-numeric">Permissions</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!roleshelp</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Prints the help for these commands</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!roleshelp, !biashelp</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!setmainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            Sets a main role, or list of main roles.<br>Only one of these can be used by a member at a time.
+                                        </td>
+                                        <td class="mdl-data-table__cell--non-numeric">!setmainrole Robot, Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!setrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">
+                                            Sets a role, or list of roles.<br>Unlike main roles, members can have multiple of them
+                                        </td>
+                                        <td class="mdl-data-table__cell--non-numeric">!setrole Robot, Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!delrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Deletes a self assign role</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!delrole Zombie</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Roles</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!listmainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Lists the roles on the server.</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!listrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say something</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!say I'm the best bot ever!</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!mainrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Tells Tny to say something</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!say I'm the best bot ever!</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!role</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Prints when a user joined the server</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!joined @tnybot</td>
+                                        <td class="mdl-data-table__cell--non-numeric">None</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="mdl-data-table__cell--non-numeric">!clearrole</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Clears chat messages</td>
+                                        <td class="mdl-data-table__cell--non-numeric">!clear, !clear 100</td>
+                                        <td class="mdl-data-table__cell--non-numeric">Manage Messages</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="tny-footer mdl-mega-footer">
+            <div class="mdl-mega-footer--top-section">
+                <div class="mdl-mega-footer--left-section">
+                    <p class="mdl-typography--font-light">Copyright © 2016
+                        <a href="https://github.com/00firestar00/">Evan</a>
+                    </p>
+                </div>
+                <div class="mdl-mega-footer--right-section">
+                    <a class="mdl-typography--font-light" href="#top">
+                        Back to Top
+                        <i class="material-icons">expand_less</i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mdl-mega-footer--middle-section">
+                <a class="tny-link mdl-typography--font-light" href="">Terms</a>
+                <a class="tny-link mdl-typography--font-light" href="">Privacy</a>
+            </div>
+
+            <div class="mdl-mega-footer--bottom-section">
+            </div>
+
+        </footer>
+    </main>
+</div>
+
+<div id="fab_ctn" class="mdl-button--fab_flinger-container">
+    <button id="fab_btn" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+        <i class="material-icons">add</i>
+    </button>
+    <div class="mdl-button--fab_flinger-options">
+        <a href="https://tny.click/invite" target="_blank">
+            <button id="discord-ttp"
+                    class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--grey-50">
+                <img src="images/discord.svg">
+            </button>
+        </a>
+        <a href="https://github.com/00firestar00/TnyBot-Discord" target="_blank">
+            <button id="github-ttp"
+                    class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--grey-50">
+                <img src="images/github-circle.svg">
+            </button>
+        </a>
+        <a href="https://discord.gg/fqmCJJQ" target="_blank">
+            <button id="support-ttp"
+                    class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--grey-50">
+                <img src="images/comment-question-outline.svg">
+            </button>
+        </a>
+    </div>
+</div>
+
+<div class="mdl-tooltip mdl-tooltip--left" data-mdl-for="github-ttp">
+    View on GitHub
+</div>
+<div class="mdl-tooltip mdl-tooltip--left" data-mdl-for="discord-ttp">
+    Add to Discord
+</div>
+<div class="mdl-tooltip mdl-tooltip--left" data-mdl-for="support-ttp">
+    Support Server
+</div>
+
+<script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
