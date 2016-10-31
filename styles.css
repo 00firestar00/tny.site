@@ -30,8 +30,30 @@ a img {
     padding-left: 40px;
 }
 
+.tny-header .mdl-layout__tab-bar .mdl-layout__tab.is-active::after {
+    height: 4px;
+}
+
+.tny-header .mdl-layout__tab-bar-button {
+    display: none;
+}
+
+.tny-header .mdl-layout__tab-bar {
+    padding: 0 0 0 16px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
 .mdl-textfield--expandable {
     width: auto;
+}
+
+.mdl-layout__content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
 }
 
 .tny-mobile-title {
@@ -116,6 +138,70 @@ a img {
 
 .tny-table {
     width: 100%;
+    table-layout: fixed;
+}
+
+.tny-table td, th {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.tny-table .sort {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    min-width: 75px;
+}
+
+.tny-table .sort:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tny-table .sort:focus {
+    outline: none;
+}
+
+.tny-table .sort:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    content: "";
+    position: relative;
+    top: -10px;
+    right: -5px;
+}
+
+.tny-table .sort.asc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgb(33, 162, 255);
+    content: "";
+    position: relative;
+    top: 4px;
+    right: -5px;
+}
+
+.tny-table .sort.desc:after {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid rgb(33, 162, 255);
+    content: "";
+    position: relative;
+    top: -4px;
+    right: -5px;
 }
 
 .tny-slogan {
@@ -127,11 +213,11 @@ a img {
 
 .tny-link {
     text-decoration: none;
-    color: rgb(33,150,243);
+    color: rgb(33, 150, 243);
 }
 
 .tny-link:hover {
-    color: rgb(83,109,254);
+    color: rgb(83, 109, 254);
 }
 
 .tny-link .material-icons {
@@ -146,7 +232,7 @@ a img {
 }
 
 .tny-footer a:hover {
-    color: rgb(83,109,254);
+    color: rgb(83, 109, 254);
 }
 
 .tny-footer .mdl-mega-footer--top-section::after {
@@ -222,8 +308,8 @@ a img {
     display: block;
     right: 0;
     bottom: 0;
-    margin-right: 32px;
-    margin-bottom: 32px;
+    margin-right: 48px;
+    margin-bottom: 48px;
     z-index: 900;
 }
 
