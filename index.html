@@ -126,6 +126,7 @@
                                         <a href="#utility-panel" class="mdl-tabs__tab is-active">Utility</a>
                                         <a href="#roles-panel" class="mdl-tabs__tab">Roles</a>
                                         <a href="#notifications-panel" class="mdl-tabs__tab">Notifications</a>
+                                        <a href="#other-panel" class="mdl-tabs__tab">Other/Experimental</a>
                                     </div>
 
                                     <div class="mdl-tabs__panel is-active" id="utility-panel">
@@ -190,8 +191,16 @@
                                             <tr>
                                                 <td class="commands mdl-data-table__cell--non-numeric">!listserveroles</td>
                                                 <td class="permissions mdl-data-table__cell--non-numeric">None</td>
-                                                <td class="mdl-data-table__cell--non-numeric">Lists the roles on the server.</td>
-                                                <td class="mdl-data-table__cell--non-numeric">None</td>
+                                                <td class="mdl-data-table__cell--non-numeric">Sends a private message with the current roles on the server.</td>
+                                                <td class="mdl-data-table__cell--non-numeric">!listserveroles</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="commands mdl-data-table__cell--non-numeric">!grep</td>
+                                                <td class="permissions mdl-data-table__cell--non-numeric">None</td>
+                                                <td class="mdl-data-table__cell--non-numeric">
+                                                    Greps (searches) messages/channels/members for a string.<br>use -i for ignoring case, and -c to return a count
+                                                </td>
+                                                <td class="mdl-data-table__cell--non-numeric">!grep -i tny members, !grep -ci "general" channels<br>!search "this string" messages</td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -306,6 +315,28 @@
                                                 <td class="permissions mdl-data-table__cell--non-numeric">None</td>
                                                 <td class="mdl-data-table__cell--non-numeric">Deletes a notification</td>
                                                 <td class="mdl-data-table__cell--non-numeric">!delnotify tny</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="mdl-tabs__panel" id="other-panel">
+                                        <table id="other-table" class="tny-table mld-cell mdl-cell--12-col mdl-data-table mdl-js-data-table mdl-data-table">
+                                            <thead>
+                                            <tr>
+                                                <th class="mdl-data-table__cell--non-numeric sort" data-sort="commands">Command</th>
+                                                <th class="mdl-data-table__cell--non-numeric sort" data-sort="permissions">Permissions</th>
+                                                <th class="mdl-data-table__cell--non-numeric">Description</th>
+                                                <th class="mdl-data-table__cell--non-numeric">Examples / Aliases</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody class="list">
+                                            <tr>
+                                                <td class="commands mdl-data-table__cell--non-numeric">!remindme</td>
+                                                <td class="permissions mdl-data-table__cell--non-numeric">None</td>
+                                                <td class="mdl-data-table__cell--non-numeric">
+                                                    Get reminders about things.<br>(experimental) Don't expect it to remind you on time. Also sometimes crashes Tny.
+                                                </td>
+                                                <td class="mdl-data-table__cell--non-numeric">!remindme 5 hours "watch that live stream"</td>
                                             </tr>
                                             </tbody>
                                         </table>
