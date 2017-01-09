@@ -51,7 +51,7 @@ function buildMessage($payload_arr) {
     $status_message = strtolower($payload_arr["status_message"]);
     $color = "";
     $status = "";
-    if ($status_message == "passed") {
+    if (in_array($status_message, array("passed", "fixed"))) {
         $status = ":white_check_mark:";
         $color = 1164829; //#11c61d green-ish
     }
