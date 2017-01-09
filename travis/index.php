@@ -55,7 +55,7 @@ function buildMessage($payload_arr) {
         $status = ":white_check_mark:";
         $color = 1164829; //#11c61d green-ish
     }
-    else if ($status_message == "failed") {
+    else if (in_array($status_message, array("failed", "broken", "still failing"))) {
         $status = ":no_entry_sign:";
         $color = 12194333; //#ba121d red-ish
     }
